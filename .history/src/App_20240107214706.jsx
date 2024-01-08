@@ -20,14 +20,12 @@ const SomeBlock = ({
   date = "1/7/2024",
   className = "",
   padding = 2,
-  style = {},
 }) => {
   return (
     <div
-      className={`p-${padding} text-center ${className}`}
-      style={{ ...style }}
+      className={`p-${padding} d-flex flex-column gap-1 text-center ${className}`}
     >
-      <div className="fs-4 text-secondary fw-medium">{title}</div>
+      <div className="fs-5 text-secondary fw-medium">{title}</div>
       <div>
         <div>{date}</div>
         <a rel="noreferrer" target="_blank" href={href}>
@@ -80,7 +78,7 @@ const Sidebar = () => {
     <>
       <div className="sidebar-lg-sticky col-md-3 col-xl-2 p-3 bg-white overflow-auto text-break">
         <div className="d-flex flex-column text-center">
-          <div className="fs-5 mb-2 lh-sm fw-medium text-secondary">
+          <div className="fs-5 mb-2 lh-sm fw-semibold text-secondary">
             Quick Links
           </div>
           <ul className="nav nav-pills flex-column gap-2">
@@ -93,7 +91,7 @@ const Sidebar = () => {
         </div>
         <hr></hr>
         <div className="d-flex flex-column text-center">
-          <div className="fs-5 mb-2 lh-sm fw-medium text-secondary">
+          <div className="fs-5 mb-2 lh-sm fw-semibold text-secondary">
             Banner Links
           </div>
           <ul className="nav nav-pills flex-column gap-2">
@@ -115,8 +113,83 @@ const Main = () => {
     <>
       <div className="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-3 bg-white">
         <div className="d-flex flex-column gap-5">
-          <TopRow className="shadow-sm"></TopRow>
-          <MiddleRow className="shadow-sm"></MiddleRow>
+          {/* <div className="text-bg-light p-2"></div> */}
+          {/* <Card width={"auto"}></Card> */}
+          <div
+            className="rounded text-center p-3 d-flex flex-column gap-2"
+            style={{ ...ekuBorder }}
+          >
+            <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
+            <div className="d-flex gap-3 flex-wrap text-nowrap">
+              <SomeBlock
+                title={"Service Ticket"}
+                date={"1/7/2024"}
+                className="col"
+              ></SomeBlock>
+              <SomeBlock
+                date={"1/7/2024"}
+                className="col"
+                title={"Call"}
+              ></SomeBlock>
+              <SomeBlock
+                date={"1/7/2024"}
+                title={"Walk-In"}
+                className="col"
+              ></SomeBlock>
+              <SomeBlock
+                date={"1/7/2024"}
+                className="col"
+                title={"Email"}
+              ></SomeBlock>
+            </div>
+          </div>
+          <div
+            className="rounded text-center p-3 d-flex flex-column gap-2"
+            style={{ ...ekuBorder }}
+          >
+            <ShadowyTitle>Student Information</ShadowyTitle>
+            <div className="d-flex gap-3 flex-wrap text-nowrap justify-content-around">
+              <div className="col">
+                <SomeBlock
+                  date={"1/7/2024"}
+                  className="col"
+                  title={"Email"}
+                ></SomeBlock>
+              </div>
+              <div className="col">
+                <SomeBlock
+                  date={"1/7/2024"}
+                  className="col"
+                  title={"Email"}
+                ></SomeBlock>
+              </div>
+              <div className="col">
+                <SomeBlock
+                  date={"1/7/2024"}
+                  className="col"
+                  title={"Email"}
+                ></SomeBlock>
+              </div>
+              <div className="col">
+                <SomeBlock
+                  date={"1/7/2024"}
+                  className="col"
+                  title={"Email"}
+                ></SomeBlock>
+              </div>
+            </div>
+          </div>
+          {/* <div className="d-flex flex-row flex-wrap justify-content-around gap-3">
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+          </div> */}
           <BottomRow></BottomRow>
         </div>
       </div>
@@ -124,78 +197,10 @@ const Main = () => {
   );
 };
 
-const TopRow = ({ className = "" }) => {
-  return (
-    <div
-      className={`rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
-      style={{ ...ekuBorder }}
-    >
-      <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
-      <div className="d-flex gap-3 flex-wrap text-nowrap">
-        <SomeBlock
-          title={"Service Ticket"}
-          date={"1/7/2024"}
-          className="col"
-        ></SomeBlock>
-        <SomeBlock date={"1/7/2024"} className="col" title={"Call"}></SomeBlock>
-        <SomeBlock
-          date={"1/7/2024"}
-          title={"Walk-In"}
-          className="col"
-        ></SomeBlock>
-        <SomeBlock
-          date={"1/7/2024"}
-          className="col"
-          title={"Email"}
-        ></SomeBlock>
-      </div>
-    </div>
-  );
-};
-
-const MiddleRow = ({ className = "" }) => {
+const BottomRow = () => {
   return (
     <>
-      <div
-        className={`rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
-        style={{ ...ekuBorder }}
-      >
-        <ShadowyTitle>Student Information</ShadowyTitle>
-        <div className="d-flex gap-3 flex-wrap text-nowrap justify-content-around">
-          <SomeBlock
-            style={{ minWidth: 300 }}
-            date={"1/7/2024"}
-            className="col"
-            title={"Email"}
-          ></SomeBlock>
-          <SomeBlock
-            style={{ minWidth: 300 }}
-            date={"1/7/2024"}
-            className="col"
-            title={"Email"}
-          ></SomeBlock>
-          <SomeBlock
-            style={{ minWidth: 300 }}
-            date={"1/7/2024"}
-            className="col"
-            title={"Email"}
-          ></SomeBlock>
-          <SomeBlock
-            style={{ minWidth: 300 }}
-            date={"1/7/2024"}
-            className="col"
-            title={"Email"}
-          ></SomeBlock>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const BottomRow = ({ className = "" }) => {
-  return (
-    <>
-      <div className={`d-flex flex-row gap-3 flex-wrap ${className}`.trimEnd()}>
+      <div className="d-flex flex-row gap-3 flex-wrap">
         <div className="d-flex flex-column gap-2 text-center col">
           <div
             style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
@@ -204,7 +209,7 @@ const BottomRow = ({ className = "" }) => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -220,7 +225,7 @@ const BottomRow = ({ className = "" }) => {
             Student Accounting
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -234,7 +239,7 @@ const BottomRow = ({ className = "" }) => {
             Registrar
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>

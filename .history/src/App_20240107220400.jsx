@@ -115,9 +115,9 @@ const Main = () => {
     <>
       <div className="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-3 bg-white">
         <div className="d-flex flex-column gap-5">
-          <TopRow className="shadow-sm"></TopRow>
-          <MiddleRow className="shadow-sm"></MiddleRow>
-          <BottomRow></BottomRow>
+          <TopRow className=""></TopRow>
+          <MiddleRow className=""></MiddleRow>
+          <BottomRow className=""></BottomRow>
         </div>
       </div>
     </>
@@ -204,7 +204,7 @@ const BottomRow = ({ className = "" }) => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -220,7 +220,7 @@ const BottomRow = ({ className = "" }) => {
             Student Accounting
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -234,7 +234,7 @@ const BottomRow = ({ className = "" }) => {
             Registrar
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>

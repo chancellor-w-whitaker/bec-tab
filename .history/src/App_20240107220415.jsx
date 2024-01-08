@@ -117,7 +117,7 @@ const Main = () => {
         <div className="d-flex flex-column gap-5">
           <TopRow className="shadow-sm"></TopRow>
           <MiddleRow className="shadow-sm"></MiddleRow>
-          <BottomRow></BottomRow>
+          <BottomRow className="shadow-sm"></BottomRow>
         </div>
       </div>
     </>
@@ -204,7 +204,7 @@ const BottomRow = ({ className = "" }) => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -220,7 +220,7 @@ const BottomRow = ({ className = "" }) => {
             Student Accounting
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -234,7 +234,7 @@ const BottomRow = ({ className = "" }) => {
             Registrar
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>

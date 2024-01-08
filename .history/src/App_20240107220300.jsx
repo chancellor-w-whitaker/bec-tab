@@ -115,9 +115,22 @@ const Main = () => {
     <>
       <div className="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-3 bg-white">
         <div className="d-flex flex-column gap-5">
-          <TopRow className="shadow-sm"></TopRow>
-          <MiddleRow className="shadow-sm"></MiddleRow>
-          <BottomRow></BottomRow>
+          {/* <div className="text-bg-light p-2"></div> */}
+          {/* <Card width={"auto"}></Card> */}
+          <TopRow className=""></TopRow>
+          <MiddleRow className=""></MiddleRow>
+          {/* <div className="d-flex flex-row flex-wrap justify-content-around gap-3">
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+          </div> */}
+          <BottomRow className=""></BottomRow>
         </div>
       </div>
     </>
@@ -195,7 +208,7 @@ const MiddleRow = ({ className = "" }) => {
 const BottomRow = ({ className = "" }) => {
   return (
     <>
-      <div className={`d-flex flex-row gap-3 flex-wrap ${className}`.trimEnd()}>
+      <div className="d-flex flex-row gap-3 flex-wrap">
         <div className="d-flex flex-column gap-2 text-center col">
           <div
             style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
@@ -204,7 +217,7 @@ const BottomRow = ({ className = "" }) => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -220,7 +233,7 @@ const BottomRow = ({ className = "" }) => {
             Student Accounting
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
@@ -234,7 +247,7 @@ const BottomRow = ({ className = "" }) => {
             Registrar
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>
