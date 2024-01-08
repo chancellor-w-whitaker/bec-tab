@@ -42,7 +42,7 @@ const ShadowyTitle = ({ children = "Placeholder", className = "" }) => {
   return (
     <div
       style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
-      className={`fs-2 lh-sm ${className}`.trimEnd()}
+      className={`h2 lh-sm ${className}`.trimEnd()}
     >
       {children}
     </div>

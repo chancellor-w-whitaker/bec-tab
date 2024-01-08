@@ -41,8 +41,8 @@ const SomeBlock = ({
 const ShadowyTitle = ({ children = "Placeholder", className = "" }) => {
   return (
     <div
+      className={`fs-2 text-dark lh-sm ${className}`.trimEnd()}
       style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
-      className={`fs-2 lh-sm ${className}`.trimEnd()}
     >
       {children}
     </div>
@@ -78,7 +78,7 @@ const NavItem = ({ href = "https://www.eku.edu/", ...rest }) => {
 const Sidebar = () => {
   return (
     <>
-      <div className="sidebar-lg-sticky col-md-3 col-xl-2 p-3 bg-white overflow-auto text-break">
+      <div className="sidebar-lg-sticky col-md-3 col-xl-2 p-3 bg-body-tertiary overflow-auto text-break">
         <div className="d-flex flex-column text-center">
           <div className="fs-5 mb-2 lh-sm fw-medium text-secondary">
             Quick Links
@@ -113,7 +113,7 @@ const Sidebar = () => {
 const Main = () => {
   return (
     <>
-      <div className="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-3 bg-white">
+      <div className="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-3 bg-body-tertiary">
         <div className="d-flex flex-column gap-5">
           <TopRow className="shadow-sm"></TopRow>
           <MiddleRow className="shadow-sm"></MiddleRow>

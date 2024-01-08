@@ -41,8 +41,8 @@ const SomeBlock = ({
 const ShadowyTitle = ({ children = "Placeholder", className = "" }) => {
   return (
     <div
-      style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
-      className={`fs-2 lh-sm ${className}`.trimEnd()}
+      className={`fs-2 text-dark-emphasis lh-sm shadowy-title text-outline ${className}`.trimEnd()}
+      // style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
     >
       {children}
     </div>
@@ -127,7 +127,7 @@ const Main = () => {
 const TopRow = ({ className = "" }) => {
   return (
     <div
-      className={`bg-white rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
+      className={`rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
       style={{ ...ekuBorder }}
     >
       <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
@@ -157,7 +157,7 @@ const MiddleRow = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`bg-white rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
+        className={`rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
         style={{ ...ekuBorder }}
       >
         <ShadowyTitle>Student Information</ShadowyTitle>

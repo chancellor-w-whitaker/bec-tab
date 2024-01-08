@@ -80,9 +80,7 @@ const Sidebar = () => {
     <>
       <div className="sidebar-lg-sticky col-md-3 col-xl-2 p-3 bg-white overflow-auto text-break">
         <div className="d-flex flex-column text-center">
-          <div className="fs-5 mb-2 lh-sm fw-medium text-secondary">
-            Quick Links
-          </div>
+          <div className="fs-5 mb-2 lh-sm fw-medium">Quick Links</div>
           <ul className="nav nav-pills flex-column gap-2">
             <NavItem>Service Ticket</NavItem>
             <NavItem>Big E Central Portal</NavItem>
@@ -93,9 +91,7 @@ const Sidebar = () => {
         </div>
         <hr></hr>
         <div className="d-flex flex-column text-center">
-          <div className="fs-5 mb-2 lh-sm fw-medium text-secondary">
-            Banner Links
-          </div>
+          <div className="fs-5 mb-2 lh-sm fw-medium">Banner Links</div>
           <ul className="nav nav-pills flex-column gap-2">
             <NavItem>ROARMAN</NavItem>
             <NavItem>RPAAWRD</NavItem>

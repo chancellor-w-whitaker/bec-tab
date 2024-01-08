@@ -41,8 +41,8 @@ const SomeBlock = ({
 const ShadowyTitle = ({ children = "Placeholder", className = "" }) => {
   return (
     <div
+      className={`fs-2 lh-sm text-dark-emphasis ${className}`.trimEnd()}
       style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
-      className={`fs-2 lh-sm ${className}`.trimEnd()}
     >
       {children}
     </div>
@@ -127,7 +127,7 @@ const Main = () => {
 const TopRow = ({ className = "" }) => {
   return (
     <div
-      className={`bg-white rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
+      className={`rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
       style={{ ...ekuBorder }}
     >
       <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
@@ -157,7 +157,7 @@ const MiddleRow = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`bg-white rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
+        className={`rounded text-center p-3 d-flex flex-column gap-2 ${className}`.trimEnd()}
         style={{ ...ekuBorder }}
       >
         <ShadowyTitle>Student Information</ShadowyTitle>
@@ -208,9 +208,7 @@ const BottomRow = ({ className = "" }) => {
           </div>
         </div>
         <div className="d-flex flex-column gap-2 text-center col">
-          <ShadowyTitle className="text-nowrap">
-            Student Accounting
-          </ShadowyTitle>
+          <ShadowyTitle>Student Accounting</ShadowyTitle>
           <div
             className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
@@ -219,7 +217,12 @@ const BottomRow = ({ className = "" }) => {
           </div>
         </div>
         <div className="d-flex flex-column gap-2 text-center col">
-          <ShadowyTitle className="text-nowrap">Registrar</ShadowyTitle>
+          <div
+            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
+            className="fs-2 lh-sm text-nowrap"
+          >
+            Registrar
+          </div>
           <div
             className="h-100 p-2 rounded bg-white d-flex flex-column gap-1 shadow-sm"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
