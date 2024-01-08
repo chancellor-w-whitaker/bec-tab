@@ -286,7 +286,7 @@
 @media (min-width: 768px) {
   .sidebar-lg-sticky {
     inset-block-start: 0;
-    position: sticky;
     height: 100vh;
+    position: sticky;
   }
 }

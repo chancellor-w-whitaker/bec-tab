@@ -14,21 +14,19 @@ const ekuMaroon = "#861f41";
 const ekuBorder = { border: `3px solid ${ekuMaroon}` };
 
 const SomeBlock = ({
+  paragraph = genericSentences.slice(0, 1).map((sen) => sen),
   href = "https://www.eku.edu/",
   title = "Chancellor",
   linkText = "Link",
-  date = "1/7/2024",
-  className = "",
+  date,
 }) => {
   return (
-    <div className={`p-2 d-flex flex-column gap-1 text-center ${className}`}>
+    <div className="p-2 d-flex flex-column gap-1 col">
       <div className="fs-5 text-secondary fw-medium">{title}</div>
-      <div>
-        <div>{date}</div>
-        <a rel="noreferrer" target="_blank" href={href}>
-          {linkText}
-        </a>
-      </div>
+      <div>{date}</div>
+      <a rel="noreferrer" target="_blank" href={href}>
+        {linkText}
+      </a>
     </div>
   );
 };
@@ -96,10 +94,10 @@ const NavItem = ({ href = "https://www.eku.edu/", ...rest }) => {
 const Sidebar = () => {
   return (
     <>
-      <div className="sidebar-lg-sticky col-md-3 col-xl-2 p-3 bg-white overflow-auto text-break">
+      <div className="sidebar-lg-sticky col-md-3 col-lg-2 p-3 bg-white overflow-auto text-nowrap">
         <div className="d-flex flex-column text-center">
           <div className="fs-5 mb-2 lh-sm fw-semibold text-secondary">
-            Quick Links
+            Quicks Links
           </div>
           <ul className="nav nav-pills flex-column gap-2">
             <NavItem>Service Ticket</NavItem>
@@ -131,7 +129,7 @@ const Sidebar = () => {
 const Main = () => {
   return (
     <>
-      <div className="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-3 bg-white">
+      <div className="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-3 bg-white">
         <div className="d-flex flex-column gap-5">
           {/* <div className="text-bg-light p-2"></div> */}
           {/* <Card width={"auto"}></Card> */}
@@ -141,26 +139,10 @@ const Main = () => {
           >
             <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
             <div className="d-flex gap-3 flex-wrap text-nowrap">
-              <SomeBlock
-                title={"Service Ticket"}
-                date={"1/7/2024"}
-                className="col"
-              ></SomeBlock>
-              <SomeBlock
-                date={"1/7/2024"}
-                className="col"
-                title={"Call"}
-              ></SomeBlock>
-              <SomeBlock
-                date={"1/7/2024"}
-                title={"Walk-In"}
-                className="col"
-              ></SomeBlock>
-              <SomeBlock
-                date={"1/7/2024"}
-                className="col"
-                title={"Email"}
-              ></SomeBlock>
+              <SomeBlock title={"Service Ticket"} date={"1/7/2024"}></SomeBlock>
+              <SomeBlock date={"1/7/2024"} title={"Call"}></SomeBlock>
+              <SomeBlock date={"1/7/2024"} title={"Walk-In"}></SomeBlock>
+              <SomeBlock date={"1/7/2024"} title={"Email"}></SomeBlock>
             </div>
           </div>
           <div className="d-flex flex-row flex-wrap justify-content-around gap-3">
@@ -193,12 +175,35 @@ const BottomRow = () => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
-            <SomeBlock></SomeBlock>
-            <SomeBlock></SomeBlock>
-            <SomeBlock></SomeBlock>
+            <div className="border mx-auto">
+              <div className="d-flex justify-content-center mb-1">
+                <div className="text-secondary fs-5 fw-medium">Chance</div>
+              </div>
+              <div className="d-flex">
+                <div className="border text-start">
+                  <ul className="mb-0">
+                    <li>This thing</li>
+                    <li>Some other thing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="border mx-auto">
+              <div className="d-flex justify-content-center mb-1">
+                <div className="text-secondary fs-5 fw-medium">Chance</div>
+              </div>
+              <div className="d-flex">
+                <div className="border text-start">
+                  <ul className="mb-0">
+                    <li>This thing</li>
+                    <li>Some other thing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="d-flex flex-column gap-2 text-center col">
@@ -209,10 +214,11 @@ const BottomRow = () => {
             Student Accounting
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
+            className="h-100 p-2 rounded bg-white"
           >
-            <SomeBlock></SomeBlock>
+            <div>Chance</div>
+            <div>Chance</div>
           </div>
         </div>
         <div className="d-flex flex-column gap-2 text-center col">
@@ -223,11 +229,11 @@ const BottomRow = () => {
             Registrar
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
+            className="h-100 p-2 rounded bg-white"
           >
-            <SomeBlock></SomeBlock>
-            <SomeBlock></SomeBlock>
+            <div>Chance</div>
+            <div>Chance</div>
           </div>
         </div>
       </div>

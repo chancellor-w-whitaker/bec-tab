@@ -14,6 +14,7 @@ const ekuMaroon = "#861f41";
 const ekuBorder = { border: `3px solid ${ekuMaroon}` };
 
 const SomeBlock = ({
+  paragraph = genericSentences.slice(0, 1).map((sen) => sen),
   href = "https://www.eku.edu/",
   title = "Chancellor",
   linkText = "Link",
@@ -193,12 +194,33 @@ const BottomRow = () => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
-            <SomeBlock></SomeBlock>
-            <SomeBlock></SomeBlock>
-            <SomeBlock></SomeBlock>
+            <div className="p-1">
+              <div className="text-secondary fw-medium fs-5">Chance</div>
+              <div>
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+              </div>
+            </div>
+            <div className="p-1">
+              <div className="text-secondary fw-medium fs-5">Chance</div>
+              <div>
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+              </div>
+            </div>
+            <div className="p-1">
+              <div className="text-secondary fw-medium fs-5">Chance</div>
+              <div>
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="d-flex flex-column gap-2 text-center col">
@@ -209,10 +231,17 @@ const BottomRow = () => {
             Student Accounting
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
-            <SomeBlock></SomeBlock>
+            <div className="p-1">
+              <div className="text-secondary fw-medium fs-5">Chance</div>
+              <div>
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="d-flex flex-column gap-2 text-center col">
@@ -223,7 +252,7 @@ const BottomRow = () => {
             Registrar
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-1"
+            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <SomeBlock></SomeBlock>

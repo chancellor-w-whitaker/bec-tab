@@ -184,7 +184,7 @@ const Main = () => {
 const BottomRow = () => {
   return (
     <>
-      <div className="d-flex flex-row gap-3 flex-wrap">
+      <div className="d-flex flex-row gap-3 flex-wrap row-cols-1 row-cols-sm-auto">
         <div className="d-flex flex-column gap-2 text-center col">
           <div
             style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
