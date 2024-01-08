@@ -175,11 +175,11 @@ const BottomRow = () => {
             Financial Aid
           </div>
           <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
+            className="h-100 p-2 rounded bg-white d-flex flex-column"
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
+              <div className="d-flex">
                 <div className="text-secondary fs-5 fw-medium">Chance</div>
               </div>
               <div className="d-flex">
@@ -192,7 +192,7 @@ const BottomRow = () => {
               </div>
             </div>
             <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
+              <div className="d-flex">
                 <div className="text-secondary fs-5 fw-medium">Chance</div>
               </div>
               <div className="d-flex">

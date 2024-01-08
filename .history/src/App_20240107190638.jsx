@@ -11,8 +11,6 @@ const genericSentences = [
 
 const ekuMaroon = "#861f41";
 
-const ekuBorder = { border: `3px solid ${ekuMaroon}` };
-
 const SomeBlock = ({
   paragraph = genericSentences.slice(0, 1).map((sen) => sen),
   href = "https://www.eku.edu/",
@@ -31,13 +29,13 @@ const SomeBlock = ({
   );
 };
 
-const ShadowyTitle = ({ children = "Placeholder" }) => {
+const ShadowyTitle = () => {
   return (
     <div
       style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
       className="fs-2 lh-sm"
     >
-      {children}
+      Recent Activity BEC
     </div>
   );
 };
@@ -59,17 +57,14 @@ const Card = ({
       <div>Chance</div>
     </>
   ),
-  title = <div className="fs-5 text-secondary fw-medium">Recent Activity</div>,
+  title = "Recent Activity",
   width = 250,
-  style = {},
 }) => {
   return (
     <>
       <div className="d-flex flex-column gap-2 text-center" style={{ width }}>
-        {title}
-        <div className="p-2 rounded bg-white" style={{ ...style }}>
-          {children}
-        </div>
+        <div className="fs-5 text-secondary fw-medium">{title}</div>
+        <div className="p-2 border rounded bg-white">{children}</div>
       </div>
     </>
   );
@@ -135,9 +130,14 @@ const Main = () => {
           {/* <Card width={"auto"}></Card> */}
           <div
             className="rounded text-center p-3 d-flex flex-column gap-2"
-            style={{ ...ekuBorder }}
+            style={{ border: `3px solid ${ekuMaroon}` }}
           >
-            <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
+            <div
+              style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
+              className="fs-2 lh-sm"
+            >
+              Recent Activity BEC
+            </div>
             <div className="d-flex gap-3 flex-wrap text-nowrap">
               <SomeBlock title={"Service Ticket"} date={"1/7/2024"}></SomeBlock>
               <SomeBlock date={"1/7/2024"} title={"Call"}></SomeBlock>
@@ -156,84 +156,10 @@ const Main = () => {
             <Card></Card>
             <Card></Card>
           </div>
-          <BottomRow></BottomRow>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const BottomRow = () => {
-  return (
-    <>
-      <div className="d-flex flex-row gap-3 flex-wrap">
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Financial Aid
-          </div>
-          <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-          >
-            <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
-                <div className="text-secondary fs-5 fw-medium">Chance</div>
-              </div>
-              <div className="d-flex">
-                <div className="border text-start">
-                  <ul className="mb-0">
-                    <li>This thing</li>
-                    <li>Some other thing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
-                <div className="text-secondary fs-5 fw-medium">Chance</div>
-              </div>
-              <div className="d-flex">
-                <div className="border text-start">
-                  <ul className="mb-0">
-                    <li>This thing</li>
-                    <li>Some other thing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Student Accounting
-          </div>
-          <div
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-            className="h-100 p-2 rounded bg-white"
-          >
-            <div>Chance</div>
-            <div>Chance</div>
-          </div>
-        </div>
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Registrar
-          </div>
-          <div
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-            className="h-100 p-2 rounded bg-white"
-          >
-            <div>Chance</div>
-            <div>Chance</div>
+          <div className="d-flex flex-row gap-3">
+            <Card title="Financial Aid" width="100%"></Card>
+            <Card title="Student Accounting" width="100%"></Card>
+            <Card title="Registrar" width="100%"></Card>
           </div>
         </div>
       </div>

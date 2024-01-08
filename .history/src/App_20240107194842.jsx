@@ -179,7 +179,7 @@ const BottomRow = () => {
             style={{ border: "3px solid rgb(134, 31, 65)" }}
           >
             <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
+              <div className="d-flex text-center">
                 <div className="text-secondary fs-5 fw-medium">Chance</div>
               </div>
               <div className="d-flex">
@@ -192,7 +192,7 @@ const BottomRow = () => {
               </div>
             </div>
             <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
+              <div className="d-flex text-center">
                 <div className="text-secondary fs-5 fw-medium">Chance</div>
               </div>
               <div className="d-flex">

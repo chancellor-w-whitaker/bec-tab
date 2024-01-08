@@ -67,7 +67,7 @@ const Card = ({
     <>
       <div className="d-flex flex-column gap-2 text-center" style={{ width }}>
         {title}
-        <div className="p-2 rounded bg-white" style={{ ...style }}>
+        <div className="p-2 border rounded bg-white" style={{ ...style }}>
           {children}
         </div>
       </div>
@@ -156,84 +156,19 @@ const Main = () => {
             <Card></Card>
             <Card></Card>
           </div>
-          <BottomRow></BottomRow>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const BottomRow = () => {
-  return (
-    <>
-      <div className="d-flex flex-row gap-3 flex-wrap">
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Financial Aid
-          </div>
-          <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-          >
-            <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
-                <div className="text-secondary fs-5 fw-medium">Chance</div>
-              </div>
-              <div className="d-flex">
-                <div className="border text-start">
-                  <ul className="mb-0">
-                    <li>This thing</li>
-                    <li>Some other thing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
-                <div className="text-secondary fs-5 fw-medium">Chance</div>
-              </div>
-              <div className="d-flex">
-                <div className="border text-start">
-                  <ul className="mb-0">
-                    <li>This thing</li>
-                    <li>Some other thing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Student Accounting
-          </div>
-          <div
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-            className="h-100 p-2 rounded bg-white"
-          >
-            <div>Chance</div>
-            <div>Chance</div>
-          </div>
-        </div>
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Registrar
-          </div>
-          <div
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-            className="h-100 p-2 rounded bg-white"
-          >
-            <div>Chance</div>
-            <div>Chance</div>
+          <div className="d-flex flex-row gap-3">
+            <Card
+              title={<ShadowyTitle>Financial Aid</ShadowyTitle>}
+              width="100%"
+            ></Card>
+            <Card
+              title={<ShadowyTitle>Student Accounting</ShadowyTitle>}
+              width="100%"
+            ></Card>
+            <Card
+              title={<ShadowyTitle>Registrar</ShadowyTitle>}
+              width="100%"
+            ></Card>
           </div>
         </div>
       </div>

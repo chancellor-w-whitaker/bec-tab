@@ -9,35 +9,22 @@ const genericSentences = [
   `Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
 ];
 
-const ekuMaroon = "#861f41";
-
-const ekuBorder = { border: `3px solid ${ekuMaroon}` };
-
 const SomeBlock = ({
   paragraph = genericSentences.slice(0, 1).map((sen) => sen),
-  href = "https://www.eku.edu/",
   title = "Chancellor",
-  linkText = "Link",
+  href = "",
   date,
 }) => {
   return (
-    <div className="p-2 d-flex flex-column gap-1 col">
-      <div className="fs-5 text-secondary fw-medium">{title}</div>
-      <div>{date}</div>
-      <a rel="noreferrer" target="_blank" href={href}>
-        {linkText}
-      </a>
-    </div>
-  );
-};
-
-const ShadowyTitle = ({ children = "Placeholder" }) => {
-  return (
-    <div
-      style={{ textShadow: `1px 1px 2px ${ekuMaroon}` }}
-      className="fs-2 lh-sm"
-    >
-      {children}
+    <div className="border rounded p-2 d-flex flex-column gap-1 col">
+      <div className="fs-5">{title}</div>
+      <span>
+        (
+        <a rel="noreferrer" target="_blank" href={href}>
+          {date}
+        </a>
+        )
+      </span>
     </div>
   );
 };
@@ -59,17 +46,14 @@ const Card = ({
       <div>Chance</div>
     </>
   ),
-  title = <div className="fs-5 text-secondary fw-medium">Recent Activity</div>,
+  title = "Recent Activity",
   width = 250,
-  style = {},
 }) => {
   return (
     <>
       <div className="d-flex flex-column gap-2 text-center" style={{ width }}>
-        {title}
-        <div className="p-2 rounded bg-white" style={{ ...style }}>
-          {children}
-        </div>
+        <div className="fs-5 text-secondary fw-medium">{title}</div>
+        <div className="p-2 border rounded bg-white">{children}</div>
       </div>
     </>
   );
@@ -79,7 +63,7 @@ const NavItem = ({ href = "https://www.eku.edu/", ...rest }) => {
   return (
     <li className="nav-item">
       <a
-        style={{ backgroundColor: ekuMaroon }}
+        style={{ backgroundColor: "#861f41" }}
         className="nav-link active"
         aria-current="page"
         rel="noreferrer"
@@ -133,12 +117,9 @@ const Main = () => {
         <div className="d-flex flex-column gap-5">
           {/* <div className="text-bg-light p-2"></div> */}
           {/* <Card width={"auto"}></Card> */}
-          <div
-            className="rounded text-center p-3 d-flex flex-column gap-2"
-            style={{ ...ekuBorder }}
-          >
-            <ShadowyTitle>Recent Activity BEC</ShadowyTitle>
-            <div className="d-flex gap-3 flex-wrap text-nowrap">
+          <div className="rounded border text-center p-3 d-flex flex-column gap-3">
+            <div className="fs-3 lh-1">Recent Activity BEC</div>
+            <div className="d-flex gap-3 flex-wrap">
               <SomeBlock title={"Service Ticket"} date={"1/7/2024"}></SomeBlock>
               <SomeBlock date={"1/7/2024"} title={"Call"}></SomeBlock>
               <SomeBlock date={"1/7/2024"} title={"Walk-In"}></SomeBlock>
@@ -156,84 +137,10 @@ const Main = () => {
             <Card></Card>
             <Card></Card>
           </div>
-          <BottomRow></BottomRow>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const BottomRow = () => {
-  return (
-    <>
-      <div className="d-flex flex-row gap-3 flex-wrap">
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Financial Aid
-          </div>
-          <div
-            className="h-100 p-2 rounded bg-white d-flex flex-column gap-2"
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-          >
-            <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
-                <div className="text-secondary fs-5 fw-medium">Chance</div>
-              </div>
-              <div className="d-flex">
-                <div className="border text-start">
-                  <ul className="mb-0">
-                    <li>This thing</li>
-                    <li>Some other thing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="border mx-auto">
-              <div className="d-flex justify-content-center mb-1">
-                <div className="text-secondary fs-5 fw-medium">Chance</div>
-              </div>
-              <div className="d-flex">
-                <div className="border text-start">
-                  <ul className="mb-0">
-                    <li>This thing</li>
-                    <li>Some other thing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Student Accounting
-          </div>
-          <div
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-            className="h-100 p-2 rounded bg-white"
-          >
-            <div>Chance</div>
-            <div>Chance</div>
-          </div>
-        </div>
-        <div className="d-flex flex-column gap-2 text-center col">
-          <div
-            style={{ textShadow: "rgb(134, 31, 65) 1px 1px 2px" }}
-            className="fs-2 lh-sm text-nowrap"
-          >
-            Registrar
-          </div>
-          <div
-            style={{ border: "3px solid rgb(134, 31, 65)" }}
-            className="h-100 p-2 rounded bg-white"
-          >
-            <div>Chance</div>
-            <div>Chance</div>
+          <div className="d-flex flex-row gap-3">
+            <Card width="100%"></Card>
+            <Card width="100%"></Card>
+            <Card width="100%"></Card>
           </div>
         </div>
       </div>
