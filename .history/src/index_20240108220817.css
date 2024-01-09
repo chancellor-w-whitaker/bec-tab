@@ -273,7 +273,7 @@
 
 :root,
 [data-bs-theme="light"] {
-  --eku-maroon: #861f41;
+  --eku-maroon:#861f41;
 
   --bs-font-sans-serif: "Poppins", sans-serif;
 
@@ -294,13 +294,9 @@
 }
 
 .eku-border {
-  border: 3px solid var(--eku-maroon);
+  border: 3px solid #861f41;
 }
 
 .eku-text-shadow {
-  text-shadow: 1px 1px 2px var(--eku-maroon);
-}
-
-.children-w-275px > .tertiary-content {
-  width: 275px;
+  textShadow: `1px 1px 2px ${ekuMaroon}`
 }

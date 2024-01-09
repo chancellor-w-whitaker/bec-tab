@@ -301,6 +301,6 @@
   text-shadow: 1px 1px 2px var(--eku-maroon);
 }
 
-.children-w-275px > .tertiary-content {
-  width: 275px;
+.children-w-250px > .tertiary-content {
+  width: 250px;
 }
